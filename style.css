@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Mono", monospace;
+    background: #f8f1e8;
+    color: #30252f;
+    transition: 0.3s;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    background: #f8f1e8;
+    border-bottom: 2px solid #30252f;
+}
+
+.logo {
+    font-family: "Press Start 2P", cursive;
+    color: #8d68a8;
+    font-size: 18px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #8d68a8;
+}
+
+.botao-menu {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.botao-tema {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #30252f;
+    background: #d8c1e8;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 22px;
+    background: #8d68a8;
+    color: white;
+    border: 2px solid #30252f;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #59416b;
+    transform: translateY(-3px);
+}
+
+.inicio {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 80px 8%;
+}
+
+.inicio-texto {
+    max-width: 650px;
+}
+
+.pequeno,
+.titulo-pequeno {
+    color: #8d68a8;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.inicio h1 {
+    font-family: "Press Start 2P", cursive;
+    font-size: clamp(28px, 5vw, 55px);
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.inicio h2 {
+    color: #8d68a8;
+    font-size: 20px;
+    min-height: 30px;
+    margin-bottom: 25px;
+}
+
+.inicio-texto > p:not(.pequeno) {
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.computador {
+    width: 300px;
+    min-width: 300px;
+}
+
+.tela {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d8c1e8;
+    border: 8px solid #30252f;
+    border-radius: 10px;
+}
+
+.tela span {
+    font-size: 55px;
+    color: #8d68a8;
+}
+
+.teclado {
+    width: 240px;
+    height: 20px;
+    margin: auto;
+    background: #30252f;
+    border-radius: 0 0 10px 10px;
+}
+
+.secao {
+    padding: 100px 8%;
+}
+
+.secao h2,
+.github h2 {
+    font-family: "Press Start 2P", cursive;
+    font-size: clamp(22px, 4vw, 38px);
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+}
+
+.sobre-conteudo p {
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.caixa-info {
+    background: #d8c1e8;
+    padding: 30px;
+    border: 2px solid #30252f;
+}
+
+.caixa-info p {
+    color: #59416b;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.caixa-info span {
+    font-size: 14px;
+}
+
+.habilidades {
+    background: #eee2d3;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #f8f1e8;
+    border: 2px solid #30252f;
+    padding: 30px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #d8c1e8;
+}
+
+.numero {
+    display: block;
+    color: #8d68a8;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.7;
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.projeto {
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: 2px solid #30252f;
+    background: #eee2d3;
+}
+
+.projeto h3 {
+    margin-bottom: 20px;
+}
+
+.projeto p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.tecnologias {
+    color: #8d68a8;
+    font-size: 12px;
+}
+
+.link-projeto {
+    margin-top: auto;
+    color: #8d68a8;
+    font-weight: bold;
+}
+
+.link-projeto:hover {
+    color: #59416b;
+}
+
+.github {
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: #d8c1e8;
+    border-top: 2px solid #30252f;
+    border-bottom: 2px solid #30252f;
+}
+
+.github h2 {
+    margin-bottom: 20px;
+}
+
+.github p {
+    line-height: 1.7;
+}
+
+.contato {
+    background: #f8f1e8;
+}
+
+.contato-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 70px;
+}
+
+.informacoes h3 {
+    margin-bottom: 20px;
+}
+
+.informacoes p {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    background: #eee2d3;
+    border: 2px solid #30252f;
+    outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #8d68a8;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(48, 37, 47, 0.7);
+    z-index: 2000;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-conteudo {
+    max-width: 450px;
+    padding: 40px;
+    text-align: center;
+    background: #f8f1e8;
+    border: 3px solid #30252f;
+}
+
+.modal-conteudo h2 {
+    font-family: "Press Start 2P", cursive;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.modal-conteudo p {
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+footer {
+    padding: 50px 8%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    background: #30252f;
+    color: #f8f1e8;
+}
+
+footer h3 {
+    color: #d8c1e8;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.copyright {
+    align-self: end;
+}
+
+.revelar {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s;
+}
+
+.revelar.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.escuro {
+    background: #211b23;
+    color: #f8f1e8;
+}
+
+body.escuro header {
+    background: #211b23;
+    border-color: #f8f1e8;
+}
+
+body.escuro .botao-tema {
+    background: #59416b;
+    color: white;
+    border-color: #f8f1e8;
+}
+
+body.escuro .habilidades {
+    background: #2c2430;
+}
+
+body.escuro .card {
+    background: #211b23;
+    border-color: #f8f1e8;
+}
+
+body.escuro .card:hover {
+    background: #59416b;
+}
+
+body.escuro .projeto {
+    background: #2c2430;
+    border-color: #f8f1e8;
+}
+
+body.escuro .contato {
+    background: #211b23;
+}
+
+body.escuro form input,
+body.escuro form textarea {
+    background: #2c2430;
+    color: white;
+    border-color: #f8f1e8;
+}
+
+body.escuro .modal-conteudo {
+    background: #211b23;
+    border-color: #f8f1e8;
+}
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    .botao-menu {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        padding: 25px;
+        background: #f8f1e8;
+        border-bottom: 2px solid #30252f;
+    }
+
+    nav.ativo {
+        display: flex;
+    }
+
+    .inicio {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 70px 6%;
+    }
+
+    .computador {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .sobre-conteudo,
+    .contato-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .github {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .logo {
+        font-size: 13px;
+    }
+
+    .inicio {
+        min-height: auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .inicio h1 {
+        font-size: 25px;
+    }
+
+    .inicio h2 {
+        font-size: 16px;
+    }
+
+    .secao {
+        padding: 70px 6%;
+    }
+
+    .secao h2,
+    .github h2 {
+        font-size: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .computador {
+        max-width: 260px;
+    }
+
+    .tela {
+        height: 180px;
+    }
+
+    .modal-conteudo {
+        padding: 25px;
+    }
+
+}
+
